@@ -557,9 +557,9 @@
   <project path="frameworks/opt/hardware/src/org/mokee/hardware" name="blackid1/frameworks_opt_hardware_org_hardware" groups="pdk" remote="github" revision="refs/heads/master" />
 
 <!-- This is our device tree specific code. Yay this made it boot up -->
-  <project path="device/asus/ctp-common" name="blackid1/device_asus_ctp-common" remote="github" revision="refs/heads/master" />
-  <project path="device/asus/T00F" name="blackid1/device_asus_T00F" remote="github" revision="refs/heads/master" />
-  <project path="vendor/asus/ctp-common" name="blackid1/android_vendor_asus_ctp-common" remote="github" revision="refs/heads/master" />
+  <project path="device/asus/ctp-common" name="blackid1/android_device_asus_ctp-common" remote="github" revision="refs/heads/master" />
+  <project path="device/asus/T00F" name="blackid1/android_device_asus_T00F" remote="github" revision="refs/heads/master" />
+  <project path="vendor/asus/ctp-common" name="blackid1/android_vendor_asus_ctp" remote="github" revision="refs/heads/master" />
   <project path="vendor/asus/T00F" name="blackid1/android_vendor_asus_t00f" remote="github" revision="refs/heads/master" />
 
   <!-- Intel specific code -->
