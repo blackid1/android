@@ -1,50 +1,37 @@
-CyanogenMod
-===========
-
-Submitting Patches
-------------------
-Patches are always welcome!  Please submit your patches via CyanogenMod Gerrit!
-You can do this by using these commands:
-
-    (From root android directory)
-    . build/envsetup.sh
-    (Go to repo you are patching, make your changes and commit)
-    cmgerrit <for(new)/changes(patch set)> <branch/change-id> 
-
-    repo start cm-13.0 .
-    (Make your changes and commit)
-    repo upload .
-Note: "." meaning current directory
-For more help on using this tool, use this command: repo help upload
-
-Make your changes and commit with a detailed message, starting with what you are working with (i.e. vision: Update Kernel)
-Commit your patches in a single commit. Squash multiple commit using this command: git rebase -i HEAD~<# of commits>
-
-To view the status of your and others' patches, visit [CyanogenMod Code Review](http://review.cyanogenmod.org/)
-
+CyanogenMod 13.0 for our beloved Zenfone 5
+==========================================
 
 Getting Started
 ---------------
 
-To get started with Android/CyanogenMod, you'll need to get
+Note to remember: all the device tree used here is syncronized using initial device tree made by dgadelha. all credits goes to him. Contributor to this CM13 rom is tank0412 and quanganh. big thanks for them.
+
+To get started with Android/CyanogenMod 13.0, you'll need to get
 familiar with [Git and Repo](http://source.android.com/source/using-repo.html).
 
-To initialize your local repository using the CyanogenMod trees, use a command like this:
+To initialize your local repository to build CyanogenMod-13.0 using our device trees, use a command like this:
 
-    repo init -u git://github.com/CyanogenMod/android.git -b cm-13.0
+    repo init -u git://github.com/blackid1/android.git -b cm-13.0
 
 Then to sync up:
 
-    repo sync
+    repo sync -c -j6
 
-Please see the [CyanogenMod Wiki](http://wiki.cyanogenmod.org/) for building instructions.
+Building
+========
 
-For more information on this Github Organization and how it is structured, 
-please [read the wiki article](http://wiki.cyanogenmod.org/w/Github_Organization)
+All the trees and stuff needed has been included in this repository (thanks to dgadelha). The Things needed is just to type:
 
-Buildbot
---------
+	. build/envsetup.sh
+	
+	lunch cm_T00F-user (u can choose betwee user, eng, or debug)
 
-All supported devices are built nightly and periodically as changes are committed to ensure the source trees remain buildable.
+	make -j5
 
-You can view the current build statuses at [CyanogenMod Jenkins](http://jenkins.cyanogenmod.org/)
+Please see the [CyanogenMod Wiki](http://wiki.cyanogenmod.org/) or [Android Docs](https://source.android.com/source/building.html) for more building instructions.
+
+Submit An Issue
+===============
+---------------
+
+If you have an issue, just address to the rom thread section with logcat. As another said, log! log! log!
